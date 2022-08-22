@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using IPC;
+
+var helper = new ConsoleHelper("Console 1", "Pipe1", "Pipe2");
+helper.Startup();
+helper.WaitForConnection();
+helper.BeginRead();
+helper.BeginWrite();
